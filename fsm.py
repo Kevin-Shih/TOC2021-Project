@@ -132,7 +132,7 @@ class TocMachine(GraphMachine):
         print(income_y)
         self.book.seek(2)
         titles=["帳本總覽"]
-        texts=[f'累計餘額:{income-spend}元\n累計支出:{spend}元累計收入:{income}元']
+        texts=[f'累計餘額:{income-spend}元\n累計支出:{spend}元\n累計收入:{income}元']
         labels=["回主選單"]
         for year in range(datetime.today().year,datetime.today().year-9,-1):
             if spend_y.get(str(year), None) is None:
