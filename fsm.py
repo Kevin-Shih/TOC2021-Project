@@ -136,7 +136,7 @@ class TocMachine(GraphMachine):
         labels=["回主選單"]
         for year in range(datetime.today().year,datetime.today().year-9,-1):
             if spend_y.get(str(year), None) is None:
-                break
+                continue
             titles.append(f'{year}概況')
             texts.append(f'{year}餘額:{income_y[str(year)]-spend_y[str(year)]}元\n總支出:{spend_y[str(year)]}元\n總收入:{income_y[str(year)]}元')
             labels.append("回主選單")
