@@ -17,8 +17,7 @@
 ## 用法
 ### 多個使用者的handle方式
 以line的user_id為key的方式建立一個儲存machine的dict，當收到webhook event時先判斷目前是否已有對應的machine，若沒有則新增一個至dict中，並且每次依user_id呼叫對應的machine。
-### 儲存帳本的資訊
-將輸入的資訊以csv like的形式存入user_id對應的文字文件中，當machine需要寫入或讀取時即可依user_id存取。
+
 ### initial state `greeting` & `user_menu` :
 初始的state設為`greeting`。
 當使用者傳送任何純文字訊息時會advance至`user_menu`，
