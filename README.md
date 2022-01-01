@@ -12,6 +12,10 @@
 ![fsm](./img/show-fsm.png)
 
 ## 用法
+### 多個使用者的handle方式
+以line的user_id為key的方式建立一個儲存machine的dict，當收到webhook event時先判斷目前是否已有對應的machine，若沒有則新增一個至dict中，並且每次依user_id呼叫對應的machine。
+### 儲存帳本的資訊
+將輸入的資訊以csv like的形式存入user_id對應的文字文件中，當machine需要寫入或讀取時即可依user_id存取。
 ### initial state `greeting` & `user_menu` :
 初始的state設為`greeting`。
 當使用者傳送任何純文字訊息時會advance至`user_menu`，
@@ -41,8 +45,18 @@ advance至`confirm`後，讓使用者確認帳目資訊沒有錯誤，有以下�
 
 ![確認](./img/confirm.jpg)
 ### `add_another` :
-advance至`confirm`後，可以選擇"再新增一筆"或"回主選單"，分別至`type`、`user_menu`。
+advance至`confirm`後，可以選擇"再新增一筆"或"回主選單"，分別至`type`、`user_menu`。  
 ![再新增一筆](./img/add_another.jpg)
 ### `show` :
 選擇"顯示帳本"會advance至`show`，會以多個column的形式顯示近幾年年度的收支概況及累計收支，  
 按下"回主選單"後返回`user_menu`。(最多十年、無紀錄及未來的年度不會顯示)  
+![顯示帳本](./img/show1.jpg)![顯示帳本](./img/show2.jpg)
+
+## 開發環境
+*	Windows 10 
+*	python 3.6
+*	pygraphviz 1.5 + graphviz 2.38.0
+	(感謝stack overflow上的各路大神的wheel><)
+*	transitions 0.6.9
+
+其餘package詳見[requirements.txt](./requirements.txt)
