@@ -81,7 +81,7 @@ class TocMachine(GraphMachine):
         print(event.source.user_id)
         self.book = codecs.open(os.path.join('./users', event.source.user_id), 'a+', 'utf-8')
         reply_token = event.reply_token
-        send_button_message(reply_token, "歡迎回到財務管家!", "請選擇功能", ["新增記帳", "顯示帳本"], thumbnail_image_url="https://306c-2001-b011-d802-d4a2-bd05-1efb-60c0-f5b2.ngrok.io/account_icon")
+        send_button_message(reply_token, "歡迎回到財務管家!", "請選擇功能", ["新增記帳", "顯示帳本"], thumbnail_image_url="https://linebot-moneymanage.herokuapp.com/account_icon")
 
     def on_enter_type(self, event):
         reply_token = event.reply_token

@@ -6,10 +6,13 @@
 ![QR](./img/bot_QR.png)
 ## 簡介
 財務管家是一款負責幫你管理收支的記帳小工具!  
-可以隨紀錄收入/支出的項目，並瀏覽年度概況
+可以隨時紀錄收入/支出的項目，並瀏覽年度概況。
+已經Deploy在heroku上囉!
+*由於deploy在heroku上，可能需要等待server甦醒><
 
 ## Finite State Machine
 ![fsm](./img/show-fsm.png)
+### [FSM也可至heroku查看](https://linebot-moneymanage.herokuapp.com/show-fsm)
 
 ## 用法
 ### 多個使用者的handle方式
