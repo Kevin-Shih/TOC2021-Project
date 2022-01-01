@@ -101,7 +101,7 @@ class TocMachine(GraphMachine):
 
     def on_enter_confirm(self, event):
         reply_token = event.reply_token
-        send_button_message(reply_token,"確認帳目資訊", "請確認帳目資訊無誤", ["是", "上一步 (修改)", "否 (捨棄)"], ["是", "上一步", "否"])
+        send_button_message(reply_token,"確認帳目資訊", f"請確認帳目資訊無誤\n類型:{self.type}\n日期:{self.date}\n描述:{self.description}\n金額:{self.money}", ["是", "上一步 (修改)", "否 (捨棄)"], ["是", "上一步", "否"])
     
     def on_enter_add_another(self, event):
         reply_token = event.reply_token
