@@ -6,8 +6,8 @@
 ![QR](./img/bot_QR.png)
 ## 簡介
 財務管家是一款負責幫你管理收支的記帳小工具!  
-可以隨時紀錄收入/支出的項目，並瀏覽年度概況。
-已經Deploy在heroku上囉!
+可以隨時紀錄收入/支出的項目，並瀏覽年度概況。  
+已經Deploy在heroku上囉!  
 *由於deploy在heroku上，可能需要等待server甦醒><
 
 ## Finite State Machine
