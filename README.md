@@ -1,8 +1,8 @@
 # TOC2021 財務管家
 ## 基本資訊
-### Line bot名稱:財務管家  
-### Bot basic ID:@771tnsaq  
-### QR code:
+### Line bot名稱：財務管家  
+### Bot basic ID：@771tnsaq  
+### QR code：
 ![QR](./img/bot_QR.png)
 ## 簡介
 財務管家是一款負責幫你管理收支的記帳小工具!  
